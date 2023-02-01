@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Startpage</title>
+        
+        <meta charset="utf-8">
+        <meta name="author" content="jhx">
+        <meta name="Startpage" content="A simple startpage">
+
+        <link rel="icon" href="assets/icon/favicon.png" type="image/x-icon">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <link href="assets/css/reset.css" rel="stylesheet">
+        <link href="assets/css/styles.css" rel="stylesheet">
+
+        <script type="text/javascript" src="config.js"></script>
+        <script type="text/javascript" src="assets/js/startpage.js"></script>
+        
+        <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+        <link href="assets/fontawesome/css/brands.css" rel="stylesheet">
+        <link href="assets/fontawesome/css/solid.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+            readConfig();
+        </script>
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h1 id="greeting">
+                <script>
+                    greetUser();
+                </script>
+            </h1>
+            <p class="text">...where do you want to go?</p>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="item-box d-flex flex-row justify-content-center align-items-center">
+                    <ul id="items" class="item-list d-flex flex-row justify-content-center align-items-center">
+                        <script>
+                            createEntries();
+                        </script>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
